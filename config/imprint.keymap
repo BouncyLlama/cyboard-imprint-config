@@ -15,37 +15,63 @@
 &kp ESC           &kp F1        &kp F2    &kp F3          &kp F4           &kp F5                       &kp F6  &kp F7        &kp F8          &kp F9            &kp F10            &kp F11
 &kp TILDE         &kp N1        &kp N2    &kp N3          &kp N4           &kp N5                       &kp N6  &kp N7        &kp N8          &kp N9            &kp N0             &kp MINUS
 &kp TAB           &kp Q         &kp W     &kp E           &kp R            &kp T                        &kp Y   &kp U         &kp I           &kp O             &kp P              &kp BSLH
-&kp EQUAL         &kp A         &kp S     &kp D           &kp F            &kp G                        &kp H   &kp J         &kp K           &kp L             &kp SEMI           &kp SQT
+&lt 4 EQUAL       &kp A         &kp S     &kp D           &kp F            &kp G                        &kp H   &kp J         &kp K           &kp L             &kp SEMI           &kp SQT
 &kp LSHFT         &kp Z         &kp X     &kp C           &kp V            &kp B                        &kp N   &kp M         &kp COMMA       &kp DOT           &kp FSLH           &kp RSHFT
 &kp LEFT_CONTROL  &kp LEFT_ALT  &kp LGUI  &kp LEFT_ARROW  &kp RIGHT_ARROW                                       &kp UP_ARROW  &kp DOWN_ARROW  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-                                                          &tog 2           &trans         &trans        &trans  &trans        &tog 1
-                                                          &kp SPACE        &kp BACKSPACE  &kp ESCAPE    &trans  &kp ENTER     &kp SPACE
+                                                          &kp LEFT_WIN     &trans         &trans        &trans  &trans        &kp DEL
+                                                          &lt 1 SPACE      &kp BACKSPACE  &kp ESCAPE    &trans  &kp ENTER     &lt 2 SPACE
             >;
         };
 
         Numpad_Nav_Layer {
             bindings = <
-&trans  &trans  &trans  &trans         &trans  &trans            &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans         &trans  &trans            &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &kp PAGE_UP    &trans  &trans            &trans  &kp HOME  &kp UP    &kp END    &trans  &trans
-&trans  &trans  &trans  &trans         &trans  &trans            &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans  &kp PAGE_DOWN  &trans  &trans            &trans  &trans    &trans    &trans     &trans  &trans
-&trans  &trans  &trans  &trans         &trans                            &trans    &trans    &trans     &trans  &trans
-                                       &trans  &trans  &trans    &trans  &trans    &trans
-                                       &trans  &trans  &trans    &trans  &trans    &trans
+&trans  &trans           &trans           &trans           &trans           &trans                     &trans         &trans              &trans        &trans     &trans  &trans
+&trans  &trans           &trans           &trans           &trans           &trans                     &trans         &trans              &trans        &trans     &trans  &trans
+&trans  &kp KP_NUMBER_0  &kp KP_NUMBER_9  &kp KP_NUMBER_8  &kp KP_NUMBER_7  &kp KP_NUMBER_6            &trans         &kp HOME            &kp UP        &kp END    &trans  &trans
+&trans  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5            &kp PAGE_UP    &kp LEFT            &kp DOWN      &kp RIGHT  &trans  &trans
+&trans  &trans           &trans           &trans           &trans           &trans                     &kp PAGE_DOWN  &trans              &trans        &trans     &trans  &trans
+&trans  &trans           &trans           &trans           &trans                                                     &trans              &trans        &trans     &trans  &trans
+                                                           &trans           &trans           &trans    &trans         &kp LG(LEFT_SHIFT)  &kp LCTRL
+                                                           &trans           &trans           &trans    &trans         &kp LEFT_GUI        &kp LEFT_ALT
+            >;
+        };
+
+        symbols {
+            bindings = <
+&trans  &trans    &trans        &trans        &trans       &trans                 &trans  &trans                &trans                 &trans            &trans             &trans
+&trans  &trans    &trans        &trans        &trans       &trans                 &trans  &trans                &trans                 &trans            &trans             &trans
+&trans  &trans    &trans        &kp ASTERISK  &kp AMPS     &kp CARET              &trans  &trans                &trans                 &trans            &trans             &trans
+&trans  &kp EXCL  &kp AT_SIGN   &kp HASH      &kp DOLLAR   &kp PERCENT            &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&trans  &trans    &kp KP_EQUAL  &kp KP_MINUS  &kp KP_PLUS  &trans                 &trans  &trans                &kp COMMA              &kp PERIOD        &kp SLASH          &kp TILDE
+&trans  &trans    &trans        &trans        &trans                                      &trans                &trans                 &trans            &trans             &trans
+                                              &trans       &trans       &trans    &trans  &trans                &trans
+                                              &trans       &trans       &trans    &trans  &trans                &trans
             >;
         };
 
         Auto_Mouse_Layer {
             bindings = <
-&trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp RCLK  &mkp MCLK  &mkp LCLK  &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans     &trans     &trans                               &trans  &trans  &trans  &trans  &trans
-                                      &trans     &trans  &trans    &trans  &trans  &trans
-                                      &trans     &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans     &trans            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans     &trans                               &trans  &trans  &trans  &trans  &trans
+                                   &trans     &trans  &trans    &trans  &trans  &trans
+                                   &trans     &trans  &trans    &trans  &trans  &trans
+            >;
+        };
+
+        i3Shortcuts {
+            bindings = <
+&trans  &trans          &trans  &trans  &trans         &trans            &trans  &trans            &trans            &trans            &trans            &trans
+&trans  &trans          &trans  &trans  &trans         &trans            &trans  &trans            &trans            &trans            &trans            &trans
+&trans  &trans          &trans  &trans  &trans         &trans            &trans  &trans            &trans            &trans            &trans            &trans
+&trans  &kp LEFT_SHIFT  &trans  &trans  &kp LG(F)      &trans            &trans  &kp LG(NUMBER_1)  &kp LG(NUMBER_2)  &kp LG(NUMBER_3)  &kp LG(NUMBER_4)  &trans
+&trans  &trans          &trans  &trans  &trans         &trans            &trans  &trans            &trans            &trans            &trans            &trans
+&trans  &trans          &trans  &trans  &trans                                   &trans            &trans            &trans            &trans            &trans
+                                        &trans         &trans  &trans    &trans  &trans            &kp LG(LS(Q))
+                                        &kp LG(SPACE)  &trans  &trans    &trans  &kp LG(RET)       &trans
             >;
         };
     };
@@ -59,19 +85,20 @@
         //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;
 
     // activate layer 3 within 500ms of the trackball moving
-     <&zip_temp_layer 3 200>;
+
+    <&zip_temp_layer 3 200 >;
 };
 
 //left hand trackball configuration
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,
-       // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,
+        // this gets it to the default installation orientation,,,
+        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,
         <&zip_xy_scaler 1 4>,
-        // make this trackball output scrolling events by default instead of cursor movement,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
