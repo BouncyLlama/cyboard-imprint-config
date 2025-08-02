@@ -12,7 +12,7 @@
         gaminglayer: gaminglayer {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 5 &rgb_ug RGB_COLOR_HSB(118,60,35) &rgb_ug RGB_TOG>;
+            bindings = <&tog 5 &rgb_ug RGB_COLOR_HSB(118,84,49) &rgb_ug RGB_TOG>;
             label = "GAMINGLAYER";
         };
     };
@@ -104,9 +104,9 @@
 
 &trackball_peripheral_listener {
     input-processors =
-        // this gets it to the default installation orientation,,,,,
-        //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;,,,
-        // activate layer 3 within 500ms of the trackball moving,,,
+        // this gets it to the default installation orientation,,,,,,
+        //<&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>;,,,,
+        // activate layer 3 within 500ms of the trackball moving,,,,
         <&zip_temp_layer 3 500 >;
 };
 
@@ -114,12 +114,12 @@
 
 &trackball_central_listener {
     input-processors =
-        // this gets it to the default installation orientation,,,,,,
-        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,
-        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,
+        // this gets it to the default installation orientation,,,,,,,
+        // <&zip_xy_transform INPUT_TRANSFORM_XY_SWAP>,,,,,,
+        // multiply sensitivity by 1, divide by 3 (make it slower for scrolling),,,,,,,
         <&zip_xy_scaler 1 5 >,
-        // make this trackball output scrolling events by default instead of cursor movement,,,,,,
+        // make this trackball output scrolling events by default instead of cursor movement,,,,,,,
         <&zip_xy_to_scroll_mapper>,
-        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,
+        // invert vertical scrolling so that the view moves in the same direction as the top of the trackball.,,,,,,,
         <&zip_scroll_transform INPUT_TRANSFORM_Y_INVERT>;
 };
